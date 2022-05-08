@@ -30,7 +30,7 @@ const App = () => {
 
   const Total = () =>
     <p>
-      Number of exercises {exercises1 + exercises2 + exercises3}
+      Number of exercises {part1.exercises + part2.exercises + part3.exercises}
     </p>;
 
   return (
