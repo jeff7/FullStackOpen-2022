@@ -18,6 +18,9 @@ const App = () => {
       <Label text={"Good: "} statistic={good} />
       <Label text={"Neutral: "} statistic={neutral} />
       <Label text={"Bad: "} statistic={bad} />
+      <Label text={"All: "} statistic={bad + neutral + good} />
+      <Label text={"Positive: "} statistic={ good/ (bad + neutral + good)} />
+      <Label text={"Average: "} statistic={ (good - bad) / (bad + neutral + good)} />
     </div>;
 };
 
