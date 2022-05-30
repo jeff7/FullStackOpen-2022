@@ -2,18 +2,18 @@ import { useState } from "react";
 
 const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</button>;
 
-const Label = ({ statistic, text }) => <p> {text} {statistic} </p>;
+const StatisticLine  = ({ statistic, text }) => <p> {text} {statistic} </p>;
 
 const Statistics = ({good, neutral, bad}) => {
 
   if ( good + neutral + bad > 0)
    return <>
-      <Label text={"Good: "} statistic={good} />
-      <Label text={"Neutral: "} statistic={neutral} />
-      <Label text={"Bad: "} statistic={bad} />
-      <Label text={"All: "} statistic={bad + neutral + good} />
-      <Label text={"Positive: "} statistic={ good/ (bad + neutral + good)} />
-      <Label text={"Average: "} statistic={ (good - bad) / (bad + neutral + good)} />
+      <StatisticLine  text={"Good: "} statistic={good} />
+      <StatisticLine  text={"Neutral: "} statistic={neutral} />
+      <StatisticLine  text={"Bad: "} statistic={bad} />
+      <StatisticLine  text={"All: "} statistic={bad + neutral + good} />
+      <StatisticLine  text={"Positive: "} statistic={ good/ (bad + neutral + good)} />
+      <StatisticLine  text={"Average: "} statistic={ (good - bad) / (bad + neutral + good)} />
     
     </>
 
