@@ -5,6 +5,8 @@ const Button = ({ handleClick, text }) => <button onClick={handleClick}>{text}</
 const Label = ({ statistic, text }) => <p> {text} {statistic} </p>;
 
 const Statistics = ({good, neutral, bad}) => {
+
+  if ( good + neutral + bad > 0)
    return <>
       <Label text={"Good: "} statistic={good} />
       <Label text={"Neutral: "} statistic={neutral} />
@@ -14,6 +16,8 @@ const Statistics = ({good, neutral, bad}) => {
       <Label text={"Average: "} statistic={ (good - bad) / (bad + neutral + good)} />
     
     </>
+
+    return <p>No feedback given</p>
 }
 
 const App = () => {
